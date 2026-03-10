@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top English — школа англійської в Харкові. Досвідчені викладачі допоможуть покращити вашу англійську ефективно та за розумною ціною.">
+    <title>Top English — школа англійської в Харкові</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/headerAndFooter.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/symbols/icon.png') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}"> -->
+    <script src="{{ url_for('static', filename='scripts/burger.js') }}" defer></script>
+</head>
+<body>
+    <div id="burgerMenu">
+        <div class="burgerRow firstBurgerRow">
+            <a href="/" style="text-decoration: none;">
+                <div id="leftBurger">
+                    <img src="{{ url_for('static', filename='img/symbols/logo.png') }}" alt="Логотип TopEnglish">
+                    <h1>TopEnglish</h1>
+                </div>
+            </a>
+            <svg id="burgerButtonBurger" onclick="hideBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
+        </div>
+        <div class="burgerRow"><a href="/" style="text-decoration: none;"><h2>Головна</h2></a></div>
+        <div class="burgerRow"><a href="/programs" style="text-decoration: none;"><h2>Програми</h2></a></div>
+        <div class="burgerRow"><a href="/prices" style="text-decoration: none;"><h2>Ціни</h2></a></div>
+        <div class="burgerRow"><a href="/teachers" style="text-decoration: none;"><h2>Учителі</h2></a></div>
+        <div class="burgerRow"><a href="/location" style="text-decoration: none;"><h2 class="current">Локація</h2></a></div>
+    </div>
+    <div id="overlay" onclick="hideBurger()"></div>
+    <header>
+        <a href="/" style="text-decoration: none;">
+            <div id="leftHeader">
+                <img src="{{ url_for('static', filename='img/symbols/logo.png') }}" alt="Логотип TopEnglish">
+                <h1>TopEnglish</h1>
+            </div>
+        </a>
+        <div id="middleHeader">
+            <a href="/" style="text-decoration: none;"><h2>Головна</h2></a>
+            <a href="/programs" style="text-decoration: none;"><h2>Програми</h2></a>
+            <a href="/prices" style="text-decoration: none;"><h2>Ціни</h2></a>
+            <a href="/teachers" style="text-decoration: none;"><h2>Учителі</h2></a>
+            <a href="/location" style="text-decoration: none;"><h2 class="current">Локація</h2></a>
+        </div>
+        <svg id="burgerButton" onclick="showBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <div id="footerButtons">
+            <a href="/programs" style="text-decoration: none;"><h2>Програми</h2></a>
+            <a href="/prices" style="text-decoration: none;"><h2>Ціни</h2></a>
+            <a href="/teachers" style="text-decoration: none;"><h2>Контакти</h2></a>
+            <a href="/location" style="text-decoration: none;"><h2>Адреса</h2></a>
+        </div>
+        <h1 id="slogan">Unlock your English!</h1>
+        <h3 id="copyrights">© <span id="year"></span> TopEnglish</h3>
+    </footer>
+</body>
+</html>

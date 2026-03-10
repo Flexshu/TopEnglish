@@ -1,0 +1,207 @@
+@import url("general.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-color: var(--gray1);
+    #burgerMenu{
+        position: fixed;
+        transform: translateY(-100%);
+        z-index: 15;
+        transition: transform 0.2s ease;
+        .burgerRow{
+            height: 60px;
+            width: calc(100vw - 40px);
+            padding: 0 20px;
+            background-color: var(--gray1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            h2{
+                font-family: 'Source Serif Pro', serif;
+                font-weight: lighter;
+                font-size: 1em;
+                color: black;
+            }
+            .current{
+                text-decoration: underline;
+            }
+        }
+        .firstBurgerRow{
+            justify-content: space-between;
+            a{
+                height: 100%;
+                #leftBurger{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        height: 75%;
+                    }
+                    h1{
+                        font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                        font-size: 0.95em;
+                        color: var(--blue3);
+                    }
+                }
+            }
+            #burgerButtonBurger{
+                height: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+    #overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100dvh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 14;
+        cursor: pointer;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+    header{
+        width: 100%;
+        height: var(--headerHeight);
+        background-color: var(--gray1);
+        position: sticky;
+        top: 0;
+        z-index: 13;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: max(2.75dvh, 22px);
+        border-bottom: 2px solid black;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        div{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            img{
+                height: 75%;
+            }
+            h1{
+                font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                font-size: 0.95em;
+                color: var(--blue3);
+            }
+            h2{
+                font-family: 'Source Serif Pro', serif;
+                font-weight: lighter;
+                font-size: 1em;
+                color: black;
+                transition: transform 0.2s ease;
+                &:hover{
+                    transform: translateY(-10%);
+                }
+            }
+            .current{
+                text-decoration: underline;
+            }
+        }
+        #leftHeader{
+            gap: 10px;
+            position: absolute;
+            left: 20px;
+            top: 0;
+        }
+        #middleHeader{
+            gap: 20px;
+        }
+        #burgerButton{
+            height: 50%;
+            display: none;
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            rect{
+                fill: var(--gray3);
+            }
+        }
+    }
+    main{
+        flex-grow: 1;
+        background-color: white;
+    }
+    footer{
+        width: 100%;
+        height: var(--headerHeight);
+        background-color: var(--gray1);
+        font-size: max(2.75dvh, 22px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 2px solid black;
+        box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+        #footerButtons{
+            display: flex;
+            gap: 20px;
+            h2{
+                font-family: 'Source Serif Pro', serif;
+                font-weight: lighter;
+                font-size: 1em;
+                color: black;
+                transition: transform 0.2s ease;
+                &:hover{
+                    transform: translateY(-10%);
+                }
+            }
+        }
+        #slogan{
+            font-family: 'Kurale', serif;
+            position: absolute;
+            right: 20px;
+            font-size: 1em;
+            font-weight: lighter;
+        }
+        #copyrights{
+            font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+            font-weight: 500;
+            position: absolute;
+            left: 20px;
+            font-size: 0.75em;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body{
+        header{
+            height: 60px;
+            font-size: 20px;
+            #middleHeader{
+                display: none;
+            }
+            #burgerButton{
+                display: block;
+            }
+        }
+        footer{
+            height: auto;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px 0;
+            font-size: clamp(12px, 4.5vw, 20px);
+            #slogan{
+                position: static;
+                text-align: center;
+            }
+            #copyrights{
+                position: static;
+                text-align: center;
+            }
+        }
+    }
+}
