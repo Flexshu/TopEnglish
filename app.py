@@ -24,4 +24,4 @@ def location():
     return f.render_template("location.html")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=os.environ.get("PORT", 5000), debug=True)
+    app.run(host="0.0.0.0", port=os.environ.get("PORT", 5001), debug=True)

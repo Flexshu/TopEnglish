@@ -71,28 +71,18 @@
             display: flex;
             justify-content: space-evenly;
             a{
+                text-decoration: none;
                 width: 42.5%;
-                .b1Button{
-                    background-color: var(--red2);
-                    border-radius: max(10px, 1.25vw);
-                    border: max(1px, 0.15vw) solid black;
-                    padding: 10px 0;
-                    width: 100%;
-                    cursor: pointer;
-                    transition: box-shadow 0.2s ease, transform 0.2s ease;
-                    &:hover{
-                        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-                        transform: scale(1.025);
-                    }
-                    h2{
-                        color: white;
-                        font-family: 'Kurale', serif;
-                        font-weight: lighter;
-                        font-size: 1em;
-                        width: 100%;
-                        text-align: center;
-                    }
-                }
+                background-color: var(--red2);
+                border-radius: max(10px, 1.25vw);
+                border: max(1px, 0.15vw) solid black;
+                padding: 10px 0;
+                transition: transform 0.2s ease;
+                color: white;
+                font-family: 'Kurale', serif;
+                font-weight: lighter;
+                font-size: 1em;
+                text-align: center;
             }
         }
     }
@@ -159,9 +149,6 @@
             align-items: center;
             gap: 1.75vw;
             transition: transform 0.2s ease;
-            &:hover{
-                transform: scale(1.025);
-            }
             svg{
                 width: 50%;
             }
@@ -181,30 +168,19 @@
                 flex-grow: 1;
             }
             a{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                .b2Button{
-                    width: 90%;
-                    background-color: red;
-                    padding: max(5px, 0.5vw) 0;
-                    border-radius: 1vw;
-                    border: max(1px, 0.125vw) solid black;
-                    cursor: pointer;
-                    transition: transform 0.2s ease, box-shadow 0.2s ease;
-                    &:hover{
-                        transform: scale(1.025);
-                        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-                    }
-                    h2{
-                        width: 100%;
-                        text-align: center;
-                        font-size: 0.65em;
-                        font-family: 'Kurale', serif;
-                        font-weight: lighter;
-                        color: white;
-                    }
-                }
+                text-decoration: none;
+                width: 90%;
+                background-color: red;
+                padding: max(5px, 0.5vw) 0;
+                border-radius: 1vw;
+                border: max(1px, 0.125vw) solid black;
+                cursor: pointer;
+                text-align: center;
+                font-size: 0.65em;
+                font-family: 'Kurale', serif;
+                font-weight: lighter;
+                color: white;
+                transition: transform 0.2s ease;
             }
         }
     }
@@ -251,36 +227,24 @@
             left: 50%;
             transform: translateX(-50%);
             background-image: linear-gradient(to bottom, var(--blue1), var(--blue2));
-            &:hover{
-                transform: translateX(-50%) scale(1.025);
-            }
         }
         #b3Circle2{
             top: 50%;
             left: 50%;
             transform: translate(-150%, -50%);
             background-image: linear-gradient(to bottom, var(--red1), var(--red2));
-            &:hover{
-                transform: translate(-150%, -50%) scale(1.025);
-            }
         }
         #b3Circle3{
             top: 50%;
             left: 50%;
             transform: translate(50%, -50%);
             background-image: linear-gradient(to bottom, var(--red1), var(--red2));
-            &:hover{
-                transform: translate(50%, -50%) scale(1.025);
-            }
         }
         #b3Circle4{
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             background-image: linear-gradient(to bottom, var(--blue1), var(--blue2));
-            &:hover{
-                transform: translateX(-50%) scale(1.025);
-            }
         }
     }
 }
@@ -324,17 +288,12 @@
                 align-items: center;
                 border: none;
                 cursor: pointer;
-                box-shadow: 0 0 0.3vw rgba(0, 0, 0, 0.5);
                 position: relative;
                 z-index: 5;
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                transition: transform 0.2s ease;
                 &::before{
                     color: white;
                     font-size: 4vw;
-                }
-                &:hover{
-                    transform: scale(1.05);
-                    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.75);
                 }
             }
             #b4ScrollLeftButton{
@@ -480,6 +439,7 @@
                 width: 85%;
                 height: 85%;
                 .b5Card{
+                    text-decoration: none;
                     width: 100%;
                     height: 100%;
                     padding: 1vw 0;
@@ -490,24 +450,11 @@
                     border: solid max(1px, 0.25vw) var(--gray3);
                     box-sizing: border-box;
                     font-size: clamp(25px, 1em, 4vh);
-                    transition: box-shadow 0.2s ease, transform 0.2s ease;
-                    &:hover{
-                        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-                        transform: scale(1.025);
-                    }
-                    a{
+                    transition: transform 0.2s ease;
+                    svg{
                         width: clamp(65px, 17.5%, 8vh);
                         aspect-ratio: 1 / 1;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        svg{
-                            width: 100%;
-                            transition: transform 0.2s ease;
-                            &:hover{
-                                transform: scale(1.1);
-                            }
-                        }
+                        transition: transform 0.2s ease;
                     }
                     h1, h2{
                         color: black;
@@ -556,7 +503,7 @@
     }
 }
 
-@media screen and (max-aspect-ratio: 7/5) {
+@media (max-aspect-ratio: 7/5) {
     #block1{
         padding: max(10px, 2vh) 0;
         height: auto;
@@ -612,7 +559,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
     .block{
         font-size: 4.25vw;
         padding: max(10px, 2vh) 0;
@@ -691,9 +638,6 @@
                 position: static;
                 border-width: 0.4vw;
                 transform: none !important;
-                &:hover{
-                    transform: scale(1.025) !important;
-                }
                 .b3Icon{
                     font-size: 2.3em;
                 }
@@ -822,7 +766,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
     #block2{
         #b2CardContainer{
             grid-template-columns: 1fr;
@@ -848,5 +792,41 @@
                 max-width: 65vw;
             }
         }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #b1Buttons a:hover{
+        transform: scale(1.025);
+    }
+    .b2Card:hover{
+        transform: scale(1.025);
+    }
+    .b2Card a:hover{
+        transform: scale(1.025);
+    }
+    #b3Circle1:hover{
+        transform: translateX(-50%) scale(1.025) !important;
+    }
+    #b3Circle2:hover{
+        transform: translate(-150%, -50%) scale(1.025) !important;
+    }
+    #b3Circle3:hover{
+        transform: translate(50%, -50%) scale(1.025) !important;
+    }
+    #b3Circle4:hover{
+        transform: translateX(-50%) scale(1.025) !important;
+    }
+    #b4ReviewCarousel button:hover{
+        transform: scale(1.05);
+    }
+    .b5Card:hover{
+        transform: scale(1.025);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) and (max-width: 900px){
+    body #block3 #b3CircleContainer .b3Circle:hover{
+        transform: scale(1.025) !important;
     }
 }

@@ -13,5 +13,6 @@
     --red2: #DC2626;
     --red3: #AF1A1B;
     --headerHeight: max(9dvh, 70px);
+    --headerMobileHeight: 60px;
     --blockHeight: max(700px, calc(100dvh - var(--headerHeight)));
 }
