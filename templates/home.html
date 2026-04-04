@@ -45,7 +45,7 @@
         <svg id="burgerButton" onclick="showBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
     </header>
     <main>
-        <div class="block" id="block1">
+        <div class="block fullScreen" id="block1">
             <div id="b1Left">
                 <svg class="b1DecorativeCurve" id="b1DecorativeCurve1" viewBox="0 0 425 110" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.02802 103.881C5.75874 101.411 7.25587 92.3372 13.258 82.7566C19.4617 72.8543 28.4255 68.5132 40.2149 65.6166C58.357 61.1593 65.5432 66.7813 89.922 79.0883C96.6319 82.4756 100.294 82.8467 103.714 82.2541C123.34 78.8536 125.787 35.2406 128.188 33.1788C137.894 24.8424 153.737 54.0944 157.624 56.5562C159.429 57.6995 161.35 57.8153 163.282 57.2093C179.553 52.1055 198.344 25.502 212.905 18.4912C221.113 14.5394 231.094 17.7437 249.556 24.7751C267.826 31.7333 281.011 30.2965 290.93 29.1175C308.395 27.0415 322.104 6.73651 325.458 6.15669C334.212 4.64354 345.617 14.4992 361.377 18.1026C391.097 19.6236 399.872 17.2109 408.683 15.6107C411.41 15.4132 414.778 15.3798 418.248 15.3454" stroke="#DC2626" stroke-width="12" stroke-linecap="round"/></svg>
                 <svg class="b1DecorativeCurve" id="b1DecorativeCurve2" viewBox="0 0 476 195" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 188.347C6 181.446 8.09253 162.544 14.1871 154.302C21.0141 145.07 45.4325 168.264 60.471 177.566C62.7979 179.005 65.4751 178.849 67.8082 178.5C82.7759 176.265 91.5925 152.974 96.1683 150.963C105.865 146.701 119.858 155.655 131.197 150.699C153.705 140.862 163.941 118.302 168.233 116.583C178.448 112.493 191.305 124.457 208.592 125.224C224.719 125.939 234.709 104.104 242.455 99.0168C250.755 93.5652 259.965 105.25 266.312 104.523C284.552 102.433 292.101 71.1789 297.906 70.3354C301.681 69.7869 307.26 72.2897 311.646 73.2155C316.032 74.1414 319.087 74.257 324.087 68.5823C337.866 52.945 344.842 37.9093 349.118 35.2446C360.559 28.1159 382.715 37.6453 394.491 35.0773C404.609 32.8708 430.504 25.0162 449.616 21.9597C454.449 19.2137 458.897 15.9051 462.681 12.4131C464.565 10.5858 466.377 8.64647 469.628 6.00024" stroke="#143F7E" stroke-width="12" stroke-linecap="round"/></svg>
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="block notFullScreen" id="block2">
+        <div class="block" id="block2">
             <h1 class="blockHeading">Чому обирають нас?</h1>
             <div id="b2CardContainer">
                 <div class="b2Card">
@@ -104,21 +104,29 @@
         <div class="block" id="block3">
             <h1 class="blockHeading">Ми пропонуємо</h1>
             <div id="b3CircleContainer">
-                <div class="b3Circle" id="b3Circle1">
-                    <h2 class="b3Icon">⭐️</h2>
-                    <h2 class="b3Text">Безкоштовний пробний урок</h2>
+                <div class="b3CircleWrapper" id="b3Circle1">
+                    <div class="b3Circle">
+                        <h2 class="b3Icon">⭐️</h2>
+                        <h2 class="b3Text">Безкоштовний пробний урок</h2>
+                    </div>
                 </div>
-                <div class="b3Circle" id="b3Circle2">
-                    <h2 class="b3Icon">🗓️</h2>
-                    <h2 class="b3Text">Гнучкий графік учителів</h2>
+                <div class="b3CircleWrapper" id="b3Circle2">
+                    <div class="b3Circle">
+                        <h2 class="b3Icon">🗓️</h2>
+                        <h2 class="b3Text">Гнучкий графік учителів</h2>
+                    </div>
                 </div>
-                <div class="b3Circle" id="b3Circle3">
-                    <h2 class="b3Icon">👤</h2>
-                    <h2 class="b3Text">Особливий підхід до кожного</h2>
+                <div class="b3CircleWrapper" id="b3Circle3">
+                    <div class="b3Circle">
+                        <h2 class="b3Icon">👤</h2>
+                        <h2 class="b3Text">Особливий підхід до кожного</h2>
+                    </div>
                 </div>
-                <div class="b3Circle" id="b3Circle4">
-                    <h2 class="b3Icon">🧑‍💻</h2>
-                    <h2 class="b3Text">Заняття онлайн та офлайн</h2>
+                <div class="b3CircleWrapper" id="b3Circle4">
+                    <div class="b3Circle">
+                        <h2 class="b3Icon">🧑‍💻</h2>
+                        <h2 class="b3Text">Заняття онлайн та офлайн</h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,7 +237,7 @@
             <a href="/teachers">Контакти</a>
             <a href="/location">Адреса</a>
         </div>
-        <h1 id="credits">Design & Development by Yehor Kovalenko</h1>
+        <h1 id="credits">Developed by Yehor Kovalenko</h1>
         <h3 id="copyrights">© TopEnglish <span id="year"></span></h3>
     </footer>
 </body>

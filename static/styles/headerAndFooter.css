@@ -147,7 +147,7 @@ body{
         box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
         #footerButtons{
             display: flex;
-            gap: 20px;
+            gap: min(4vw, 20px);
             a{
                 text-decoration: none;
                 font-family: 'Source Serif Pro', serif;
@@ -189,9 +189,9 @@ body{
         footer{
             height: auto;
             flex-direction: column;
-            gap: 10px;
+            gap: min(2vw, 10px);
             padding: 10px 0;
-            font-size: clamp(12px, 4.5vw, 20px);
+            font-size: min(4.5vw, 20px);
             #credits{
                 position: static;
                 text-align: center;

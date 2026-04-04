@@ -96,3 +96,12 @@ for (let i = 0; i < dots.length; i++){
         scrollToCard(i);
     });
 }
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    removeTransition();
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        returnTransition();
+    }, 10);
+});

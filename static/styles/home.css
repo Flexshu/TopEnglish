@@ -2,17 +2,18 @@
 
 .block{
     width: 100%;
-    height: var(--blockHeight);
+    height: auto;
     font-size: min(2.25vw, 50px);
+    padding-bottom: max(15px, 1.25vw);
     .blockHeading{
         width: 90%;
         text-align: center;
-        font-size: max(2em, 20px);
+        font-size: 2em;
         font-family: 'Source Serif Pro', serif;
     }
 }
-.notFullScreen{
-    height: auto;
+.fullScreen{
+    height: var(--blockHeight);
 }
 #block1{
     display: flex;
@@ -74,7 +75,7 @@
                 text-decoration: none;
                 width: 42.5%;
                 background-color: var(--red2);
-                border-radius: max(10px, 1.25vw);
+                border-radius: 1.25vw;
                 border: max(1px, 0.15vw) solid black;
                 padding: 10px 0;
                 transition: transform 0.2s ease;
@@ -135,15 +136,14 @@
     }
     #b2CardContainer{
         width: 96vw;
-        flex-grow: 1;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         .b2Card{
             width: 75%;
             border-radius: 2.5vw;
-            box-shadow: 0 0 max(10px, 0.5vw) rgba(0, 0, 0, 0.75);
-            padding: max(1.5vw, 15px);
+            box-shadow: 0 0 1vw rgba(0, 0, 0, 0.75);
+            padding: 1.5vw;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -171,7 +171,7 @@
                 text-decoration: none;
                 width: 90%;
                 background-color: red;
-                padding: max(5px, 0.5vw) 0;
+                padding: 0.5vw 0;
                 border-radius: 1vw;
                 border: max(1px, 0.125vw) solid black;
                 cursor: pointer;
@@ -190,61 +190,72 @@
     flex-direction: column;
     align-items: center;
     .blockHeading{
-        padding-top: max(12.5px, 2.5vh);
+        padding-top: max(12.5px, 1.5vw);
     }
     #b3CircleContainer{
         width: 100%;
-        flex-grow: 1;
         position: relative;
-        .b3Circle{
-            height: clamp(250px, 35vh, 45%);
-            aspect-ratio: 1 / 1;
-            border-radius: 50%;
+        height: 42vw;
+        .b3CircleWrapper{
             position: absolute;
-            border: 0.2vw solid black;
-            transition: transform 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            .b3Icon{
-                font-size: max(9vh, 64px);
-                user-select: none;
-                -webkit-user-select: none;
-            }
-            .b3Text{
-                font-size: max(3.25vh, 23px);
-                font-family: 'Source Sans Pro', serif;
-                font-weight: bolder;
-                text-align: center;
-                color: white;
-                width: 80%;
+            .b3Circle{
+                height: 19vw;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                border: 0.2vw solid black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                font-size: 1.75vw;
+                transition: transform 0.2s ease;
+                .b3Icon{
+                    font-size: 2.75em;
+                    user-select: none;
+                    -webkit-user-select: none;
+                }
+                .b3Text{
+                    font-size: 1em;
+                    font-family: 'Source Sans Pro', serif;
+                    font-weight: bolder;
+                    text-align: center;
+                    color: white;
+                    width: 80%;
+                }
             }
         }
         #b3Circle1{
-            top: 20px;
+            top: 1vw;
             left: 50%;
             transform: translateX(-50%);
-            background-image: linear-gradient(to bottom, var(--blue1), var(--blue2));
+            .b3Circle{
+                background-image: linear-gradient(to bottom, var(--blue1), var(--blue2));
+            }
         }
         #b3Circle2{
             top: 50%;
             left: 50%;
             transform: translate(-150%, -50%);
-            background-image: linear-gradient(to bottom, var(--red1), var(--red2));
+            .b3Circle{
+                background-image: linear-gradient(to bottom, var(--red1), var(--red2));
+            }
         }
         #b3Circle3{
             top: 50%;
             left: 50%;
             transform: translate(50%, -50%);
-            background-image: linear-gradient(to bottom, var(--red1), var(--red2));
+            .b3Circle{
+                background-image: linear-gradient(to bottom, var(--red1), var(--red2));
+            }
         }
         #b3Circle4{
-            bottom: 20px;
+            bottom: 1vw;
             left: 50%;
             transform: translateX(-50%);
-            background-image: linear-gradient(to bottom, var(--blue1), var(--blue2));
+            .b3Circle{
+                background-image: linear-gradient(to bottom, var(--blue1), var(--blue2));
+            }
         }
     }
 }
@@ -253,7 +264,6 @@
     flex-direction: column;
     align-items: center;
     #b4Container{
-        flex-grow: 1;
         width: 100%;
         position: relative;
         display: flex;
@@ -261,6 +271,7 @@
         justify-content: center;
         align-items: center;
         gap: 3vw;
+        padding: 5vw 0;
         .b4DecorativeCurve{
             position: absolute;
             width: 20%;
@@ -417,13 +428,13 @@
     .blockSubheading{
         width: 90%;
         text-align: center;
-        font-size: clamp(36px, 1.25em, 4.85vh);
+        font-size: 1.25em;
         font-family: 'Kurale', serif;
         color: var(--gray3);
         font-weight: 100;
+        padding-bottom: 1vw;
     }
     #b5Main{
-        flex-grow: 1;
         display: flex;
         width: 100%;
         align-items: stretch;
@@ -447,12 +458,12 @@
                     grid-template: 9fr 7fr 5fr / 1fr;
                     justify-items: center;
                     align-items: center;
-                    border: solid max(1px, 0.25vw) var(--gray3);
+                    border: solid max(1px, 0.3vw) var(--gray3);
                     box-sizing: border-box;
-                    font-size: clamp(25px, 1em, 4vh);
+                    font-size: 1em;
                     transition: transform 0.2s ease;
                     svg{
-                        width: clamp(65px, 17.5%, 8vh);
+                        width: 17.5%;
                         aspect-ratio: 1 / 1;
                         transition: transform 0.2s ease;
                     }
@@ -486,12 +497,12 @@
             height: 100%;
             font-size: 2.25vw;
             img{
-                height: max(52.5vh, 400px);
+                height: 30vw;
                 border-radius: 2vw;
                 box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
             }
             h1{
-                font-size: clamp(38px, 1.275em, 5vh);
+                font-size: 1.275em;
                 text-align: center;
                 font-family: 'Source Serif Pro', serif;
                 font-weight: 100;
@@ -519,55 +530,16 @@
             }
         }
     }
-    #block3{
-        padding: 0 0 max(10px, 2vh) 0;
-        height: auto;
-        #b3CircleContainer{
-            height: calc(17.5vw * 3 + 20px * 4);
-            .b3Circle{
-                height: 25vw;
-                .b3Icon{
-                    font-size: 2.75em;
-                }
-                .b3Text{
-                    font-size: 1em;
-                }
-            }
-        }
-    }
-    #block4{
-        padding: 0 0 max(10px, 2vh) 0;
-        height: auto;
-        #b4Container{
-            padding: 5vw 0;
-        }
-    }
-    #block5{
-        padding: 0 0 max(10px, 2vh) 0;
-        height: auto;
-        .blockSubheading{
-            padding-bottom: 1vw;
-        }
-        #b5Main{
-            flex-grow: 0;
-            #b5Right{
-                img{
-                    height: 32.5vw;
-                }
-            }
-        }
-    }
 }
 
 @media (max-width: 900px) {
     .block{
         font-size: 4.25vw;
-        padding: max(10px, 2vh) 0;
-        height: auto;
     }
     #block1{
+        height: auto;
         #b1Left{
-            gap: max(10px, 2vh);
+            gap: 1.85vw;
             .b1DecorativeCurve{
                 display: none;
             }
@@ -580,14 +552,10 @@
             #b1Buttons{
                 width: 85%;
                 a{
-                    .b1Button{
-                        padding: 1vw 0;
-                        border-radius: max(10px, 2.5vw);
-                        border-width: max(1px, 0.3vw);
-                        h2{
-                            font-size: 1.2em;
-                        }
-                    }
+                    padding: 1vw 0;
+                    border-radius: 2.5vw;
+                    border-width: max(1px, 0.3vw);
+                    font-size: 1.2em;
                 }
             }
         }
@@ -603,17 +571,17 @@
             .b2Card{
                 border-radius: 4vw;
                 gap: 2.5vw;
+                box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.75);
+                padding: 2.75vw;
                 h1{
                     font-size: 0.8em;
                 }
                 p{
                     font-size: 0.55em;
                 }
-                a .b2Button{
+                a{
                     border-radius: 1.5vw;
-                    h2{
-                        font-size: 0.65em;
-                    }
+                    font-size: 0.65em
                 }
             }
             .b2Card:nth-child(3){
@@ -633,16 +601,19 @@
             flex-wrap: wrap;
             row-gap: 20px;
             height: auto;
-            .b3Circle{
-                height: 40vw;
+            .b3CircleWrapper{
                 position: static;
-                border-width: 0.4vw;
                 transform: none !important;
-                .b3Icon{
-                    font-size: 2.3em;
-                }
-                .b3Text{
-                    font-size: 0.85em;
+                .b3Circle{
+                    height: 40vw;
+                    border-width: 0.4vw;
+                    font-size: 1em;
+                    .b3Icon{
+                        font-size: 2.3em;
+                    }
+                    .b3Text{
+                        font-size: 0.85em;
+                    }
                 }
             }
         }
@@ -722,31 +693,30 @@
             gap: 3vw;
             align-items: center;
             #b5Left{
-                width: 85%;
+                width: 95%;
                 #b5CardContainer{
-                    grid-template: repeat(4, 1fr) / 1fr;
                     gap: 3vw;
                     height: auto;
                     .b5Card{
-                        border-width: max(2px, 0.75vw);
+                        border-width: max(2px, 0.5vw);
                         padding: 3vw 0;
                         height: auto;
                         gap: 2vw;
                         grid-template: auto / auto;
                         font-size: inherit;
-                        a{
-                            width: 15%;
+                        svg{
+                            width: 17.5%;
                         }
                         h1{
-                            font-size: 1.5em;
+                            font-size: 1em;
                         }
                         h2{
-                            font-size: 1.25em;
+                            font-size: 0.75em;
                         }
                     }
                     #b5EmailCard{
                         h2{
-                            font-size: 1.25em;
+                            font-size: 0.6em;
                         }
                     }
                 }
@@ -766,35 +736,6 @@
     }
 }
 
-@media (max-width: 500px) {
-    #block2{
-        #b2CardContainer{
-            grid-template-columns: 1fr;
-            .b2Card{
-                width: 65vw;
-                padding: max(3.5vw, 7px);
-                border-radius: 6.5vw;
-                gap: max(7px, 5vw);
-                h1{
-                    font-size: 1.3em;
-                }
-                p{
-                    font-size: 1em;
-                }
-                a .b2Button{
-                    border-radius: max(5px, 3vw);
-                    h2 {
-                        font-size: 1.25em;
-                    }
-                }
-            }
-            .b2Card:nth-child(3){
-                max-width: 65vw;
-            }
-        }
-    }
-}
-
 @media (hover: hover) and (pointer: fine) {
     #b1Buttons a:hover{
         transform: scale(1.025);
@@ -805,28 +746,13 @@
     .b2Card a:hover{
         transform: scale(1.025);
     }
-    #b3Circle1:hover{
-        transform: translateX(-50%) scale(1.025) !important;
-    }
-    #b3Circle2:hover{
-        transform: translate(-150%, -50%) scale(1.025) !important;
-    }
-    #b3Circle3:hover{
-        transform: translate(50%, -50%) scale(1.025) !important;
-    }
-    #b3Circle4:hover{
-        transform: translateX(-50%) scale(1.025) !important;
+    .b3Circle:hover{
+        transform: scale(1.025);
     }
     #b4ReviewCarousel button:hover{
         transform: scale(1.05);
     }
     .b5Card:hover{
         transform: scale(1.025);
-    }
-}
-
-@media (hover: hover) and (pointer: fine) and (max-width: 900px){
-    body #block3 #b3CircleContainer .b3Circle:hover{
-        transform: scale(1.025) !important;
     }
 }
