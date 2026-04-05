@@ -2,7 +2,6 @@
 
 .block{
     width: 100%;
-    height: auto;
     font-size: min(2.25vw, 50px);
     padding-bottom: max(15px, 1.25vw);
     .blockHeading{
@@ -77,7 +76,7 @@
                 background-color: var(--red2);
                 border-radius: 1.25vw;
                 border: max(1px, 0.15vw) solid black;
-                padding: 10px 0;
+                padding: 0.5vw 0;
                 transition: transform 0.2s ease;
                 color: white;
                 font-family: 'Kurale', serif;
@@ -477,7 +476,7 @@
                         font-size: 1.25em;
                     }
                     h2{
-                        font-size: 1em;
+                        font-size: 0.9em;
                     }
                 }
                 #b5EmailCard{
@@ -502,7 +501,7 @@
                 box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
             }
             h1{
-                font-size: 1.275em;
+                font-size: 1.2em;
                 text-align: center;
                 font-family: 'Source Serif Pro', serif;
                 font-weight: 100;
@@ -729,7 +728,7 @@
                     margin-top: 2vw;
                 }
                 h1{
-                    font-size: 1.5em;
+                    font-size: 1.4em;
                 }
             }
         }

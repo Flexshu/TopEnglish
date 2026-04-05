@@ -7,7 +7,7 @@
     <title>Top English — школа англійської в Харкові</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/headerAndFooter.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='img/symbols/icon.png') }}">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/programs.css') }}">
     <script src="{{ url_for('static', filename='scripts/burger.js') }}" defer></script>
 </head>
 <body>
@@ -43,7 +43,52 @@
         <svg id="burgerButton" onclick="showBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
     </header>
     <main>
-
+        <h1 class="blockHeading">Наші програми навчання</h1>
+        <div class="cardWrapper">
+            <div class="card" id="card1">
+                <div class="cardHeading">
+                    <h1 class="cardNumber">1</h1>
+                    <h1 class="cardHeadingText">Загальна англійська</h1>
+                </div>
+                <p class="cardDescription">Комплексна програма для розвитку всіх навичок: говоріння, письмо, читання, слухання та граматика. Підходить учням будь-якого рівня — від A1 до C1. Програма допомагає впевнено спілкуватися у повсякденних ситуаціях і будувати міцну мовну базу.</p>
+            </div>
+            <div class="card" id="card2">
+                <div class="cardHeading">
+                    <h1 class="cardNumber">2</h1>
+                    <h1 class="cardHeadingText">Підготовка до екзамену</h1>
+                </div>
+                <p class="cardDescription">Підготовка до будь-яких екзаменів: IELTS, TOEFL, PET, FCE, НМТ тощо. Працюємо над усіма частинами тесту та даємо індивідуальні рекомендації за вашими слабкими місцями.</p>
+            </div>
+            <div class="card" id="card3">
+                <div class="cardHeading">
+                    <h1 class="cardNumber">3</h1>
+                    <h1 class="cardHeadingText">Англійська для дітей</h1>
+                </div>
+                <p class="cardDescription">Ігровий формат навчання для дітей 6–11 років. Уроки проходять легко та весело: інтерактиви, картки, пісні, мультфільми та живе спілкування. Дитина запам’ятовує слова природно і вчиться будувати перші фрази.</p>
+            </div>
+            <div class="card" id="card4">
+                <div class="cardHeading">
+                    <h1 class="cardNumber">4</h1>
+                    <h1 class="cardHeadingText">Англійська для підлітків</h1>
+                </div>
+                <p class="cardDescription">Програма для підлітків 12–17 років, спрямована на розвиток реальної комунікації та сучасної лексики. Використовуємо актуальні теми, відео та інтерактиви, щоб підліткам було цікаво й корисно.</p>
+            </div>
+            <div class="card" id="card5">
+                <div class="cardHeading">
+                    <h1 class="cardNumber">5</h1>
+                    <h1 class="cardHeadingText">Бізнес-англійська</h1>
+                </div>
+                <p class="cardDescription">Курс для тих, хто працює в міжнародному середовищі або планує вийти на ринок іноземних компаній. Навчаємо термінології, імейлів, презентацій, перемовин, дзвінків та ділової комунікації. Практика реальних робочих ситуацій.</p>
+            </div>
+            <div class="card" id="card6">
+                <div class="cardHeading">
+                    <h1 class="cardNumber">6</h1>
+                    <h1 class="cardHeadingText">Англійська з нуля</h1>
+                </div>
+                <p class="cardDescription">Курс для повних початківців. Повільний темп, прості матеріали, базова лексика та фрази, багато повторень і підтримка викладача. Ідеально, якщо студент ніколи не вчив англійську.</p>
+            </div>
+        </div>
+        <a href="/prices">Переглянути ціни</a>
     </main>
     <footer>
         <div id="footerButtons">

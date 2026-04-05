@@ -1,0 +1,121 @@
+@import url("general.css");
+
+main{
+    font-size: min(2.25vw, 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .blockHeading{
+        width: 90%;
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Source Serif Pro', serif;
+        margin-top: 2vw;
+    }
+    .cardWrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 3vw;
+        margin: 3vw 0;
+        width: 100vw;
+        .card{
+            width: 40vw;
+            .cardHeading{
+                display: flex;
+                align-items: center;
+                gap: 1vw;
+                margin-bottom: 1vw;
+                .cardNumber{
+                    font-size: 1.2em;
+                    font-family: 'Source Serif Pro', serif;
+                    color: white;
+                    width: 3.75vw;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    text-align: center;
+                    vertical-align: middle;
+                    line-height: 3.75vw;
+                }
+                .cardHeadingText{
+                    font-size: 1.2em;
+                    font-family: 'Source Serif Pro', serif;
+                }
+            }
+            p{
+                font-size: 0.8em;
+                font-family: 'Kurale', serif;
+            }
+        }
+        #card1 .cardNumber{
+            background-color: var(--blue2);
+        }
+        #card2 .cardNumber{
+            background-color: var(--red1);
+        }
+        #card3 .cardNumber{
+            background-color: var(--red3);
+        }
+        #card4 .cardNumber{
+            background-color: var(--blue1);
+        }
+        #card5 .cardNumber{
+            background-color: var(--blue3);
+        }
+        #card6 .cardNumber{
+            background-color: var(--red2);
+        }
+    }
+    a{
+        text-decoration: none;
+        background-color: var(--red2);
+        border-radius: 1.25vw;
+        border: max(1px, 0.15vw) solid black;
+        padding: 0.5vw 1vw;
+        margin-bottom: 3vw;
+        color: white;
+        font-family: 'Kurale', serif;
+        font-weight: lighter;
+        font-size: 1em;
+        text-align: center;
+        transition: transform 0.2s ease;
+    }
+}
+
+@media (max-width: 900px){
+    main{
+        .blockHeading{
+            font-size: 4em;
+            margin-top: 4vw;
+        }
+        .cardWrapper{
+            row-gap: 6vw;
+            margin: 6vw 0;
+            font-size: 2em;
+            .card{
+                width: 80vw;
+                .cardHeading{
+                    gap: 2vw;
+                    margin-bottom: 2vw;
+                    .cardNumber{
+                        width: 7.5vw;
+                        line-height: 7.5vw;
+                    }
+                }
+            }
+        }
+        a{
+            border-radius: 2.5vw;
+            border: max(1px, 0.3vw) solid black;
+            padding: 1vw 2vw;
+            margin-bottom: 6vw;
+            font-size: 2em;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    main a:hover{
+        transform: scale(1.025);
+    }
+}
