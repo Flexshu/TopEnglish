@@ -66,7 +66,7 @@ main{
             background-color: var(--red2);
         }
     }
-    a{
+    .button{
         text-decoration: none;
         background-color: var(--red2);
         border-radius: 1.25vw;
@@ -104,7 +104,7 @@ main{
                 }
             }
         }
-        a{
+        .button{
             border-radius: 2.5vw;
             border: max(1px, 0.3vw) solid black;
             padding: 1vw 2vw;
@@ -115,7 +115,7 @@ main{
 }
 
 @media (hover: hover) and (pointer: fine) {
-    main a:hover{
+    .button:hover{
         transform: scale(1.025);
     }
 }

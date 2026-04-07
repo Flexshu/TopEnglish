@@ -134,6 +134,41 @@ body{
     main{
         flex-grow: 1;
         background-color: white;
+        #floatButtonWrapper{
+            position: fixed;
+            z-index: 18;
+            right: 35px;
+            bottom: 35px;
+            transition: transform 0.25s ease;
+            #floatButton{
+                width: 70px;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                background-color: var(--red2);
+                filter: drop-shadow(0 0 1px var(--gray3));
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: pulse 10s infinite;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    border: solid 3px var(--red2);
+                    box-sizing: border-box;
+                    animation: wave 10s infinite ease;
+                }
+                svg{
+                    width: 50%;
+                    animation: shake 10s infinite;
+                    path{
+                        fill: white;
+                    }
+                }
+            }
+        }
     }
     footer{
         width: 100%;
@@ -201,6 +236,18 @@ body{
                 text-align: center;
             }
         }
+        main{
+            #floatButtonWrapper{
+                right: 25px;
+                bottom: 25px;
+                #floatButton{
+                    width: 50px;
+                    &::after{
+                        border-width: 2px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -213,5 +260,55 @@ body{
     }
     #footerButtons a:hover{
         transform: translateY(-10%);
+    }
+    #floatButtonWrapper:hover{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pulse{
+    47.5%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.15);
+    }
+    52.5%{
+        transform: scale(1);
+    }
+}
+
+@keyframes wave{
+    49%{
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    60%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    61%{
+        transform: scale(1);
+    }
+}
+
+@keyframes shake{
+    47.5%{
+        transform: rotate(0);
+    }
+    48.75%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    51.25%{
+        transform: rotate(15deg);
+    }
+    52.5%{
+        transform: rotate(0);
     }
 }
