@@ -11,7 +11,7 @@
     <script src="{{ url_for('static', filename='scripts/burger.js') }}" defer></script>
 </head>
 <body>
-    <div id="burgerMenu">
+   <div id="burgerMenu">
         <div class="burgerRow firstBurgerRow">
             <a href="/" style="text-decoration: none;">
                 <div id="leftBurger">
@@ -21,10 +21,10 @@
             </a>
             <svg id="burgerButtonBurger" onclick="hideBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
         </div>
-        <div class="burgerRow"><a href="/programs">Програми</a></div>
-        <div class="burgerRow"><a href="/prices">Ціни</a></div>
+        <div class="burgerRow"><a href="/services#pricesBlock">Ціни</a></div>
+        <div class="burgerRow"><a href="/services#cardBlock">Програми</a></div>
         <div class="burgerRow"><a href="/teachers">Учителі</a></div>
-        <div class="burgerRow"><a href="/location" class="current">Локація</a></div>
+        <div class="burgerRow"><a href="/location">Локація</a></div>
     </div>
     <div id="overlay" onclick="hideBurger()"></div>
     <header>
@@ -35,10 +35,10 @@
             </div>
         </a>
         <div id="middleHeader">
-            <a href="/programs">Програми</a>
-            <a href="/prices">Ціни</a>
+            <a href="/services#pricesBlock">Ціни</a>
+            <a href="/services#cardBlock">Програми</a>
             <a href="/teachers">Учителі</a>
-            <a href="/location" class="current">Локація</a>
+            <a href="/location">Локація</a>
         </div>
         <svg id="burgerButton" onclick="showBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
     </header>
@@ -51,8 +51,8 @@
     </main>
     <footer>
         <div id="footerButtons">
-            <a href="/programs">Програми</a>
-            <a href="/prices">Ціни</a>
+            <a href="/services#pricesBlock">Ціни</a>
+            <a href="/services#cardBlock">Програми</a>
             <a href="/teachers">Контакти</a>
             <a href="/location">Адреса</a>
         </div>

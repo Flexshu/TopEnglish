@@ -7,13 +7,9 @@ app = f.Flask(__name__)
 def home():
     return f.render_template("home.html")
 
-@app.route("/programs")
+@app.route("/services")
 def programs():
-    return f.render_template("programs.html")
-
-@app.route("/prices")
-def prices():
-    return f.render_template("prices.html")
+    return f.render_template("services.html")
 
 @app.route("/teachers")
 def teachers():

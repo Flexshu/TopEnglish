@@ -9,6 +9,7 @@
         text-align: center;
         font-size: 2em;
         font-family: 'Source Serif Pro', serif;
+        font-weight: 600;
     }
 }
 .fullScreen{
@@ -155,7 +156,7 @@
                 text-align: center;
                 font-size: 0.9em;
                 font-family: 'Source Serif Pro', serif;
-                font-weight: bold;
+                font-weight: 600;
                 padding: 0;
             }
             p{
@@ -367,7 +368,7 @@
                             flex-grow: 1;
                             font-size: 0.85em;
                             font-family: 'Source Serif Pro', serif;
-                            font-weight: 700;
+                            font-weight: 600;
                         }
                     }
                     p{
@@ -506,7 +507,7 @@
                 font-family: 'Source Serif Pro', serif;
                 font-weight: 100;
                 span{
-                    font-weight: 1000;
+                    font-weight: 600;
                 }
             }
         }

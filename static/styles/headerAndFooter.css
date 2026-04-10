@@ -32,9 +32,6 @@ body{
                 color: black;
                 transition: transform 0.2s ease;
             }
-            .current{
-                text-decoration: underline;
-            }
         }
         .firstBurgerRow{
             justify-content: space-between;
@@ -106,9 +103,6 @@ body{
                 font-size: 1em;
                 color: black;
                 transition: transform 0.2s ease;
-            }
-            .current{
-                text-decoration: underline;
             }
         }
         #leftHeader{

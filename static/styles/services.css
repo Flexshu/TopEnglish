@@ -1,0 +1,260 @@
+@import url("general.css");
+
+html{
+    scroll-behavior: smooth;
+}
+
+main{
+    font-size: min(2.25vw, 50px);
+    #pricesBlock{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: var(--blockHeight);
+        scroll-margin-top: var(--headerHeight);
+        #pbMain{
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: stretch;
+            .left{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-grow: 1;
+                table{
+                    width: 80%;
+                    border-collapse: collapse;
+                    tr{
+                        th, td{
+                            padding: 0.8vw 0;
+                            text-align: center;
+                            font-family: 'Source Serif Pro', serif;
+                            font-size: 0.75em;
+                            border: solid 0.15vw var(--gray1);
+                        }
+                        th{
+                            font-weight: 700;
+                        }
+                        th:first-child, td:first-child{
+                            border-left: none;
+                        }
+                        th:last-child, td:last-child{
+                            border-right: none;
+                        }
+                    }
+                    tr:first-child th, tr:first-child td{
+                        border-top: none;
+                    }
+                    tr:last-child th, tr:last-child td{
+                        border-bottom: none;
+                    }
+                }
+                .tip{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .subheading{
+                        width: 90%;
+                        text-align: center;
+                        font-size: 1.25em;
+                        font-family: 'Source Serif Pro', serif;
+                        font-weight: 600;
+                        margin-bottom: 0.5vw;
+                    }
+                    ul{
+                        width: 80%;
+                        font-size: 0.75em;
+                        font-family: 'Kurale', serif;
+                        list-style-type: none;
+                    }
+                }
+            }
+            .right{
+                display: flex;
+                align-items: center;
+                margin-right: 3vw;
+                img{
+                    height: max(70vh, 530px);
+                    filter: drop-shadow(3px 3px 6px var(--gray2));
+                }
+            }
+        }
+    }
+    #cardBlock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        scroll-margin-top: var(--headerHeight);
+        #cardWrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            row-gap: 3vw;
+            margin: 3vw 0;
+            width: 100vw;
+            .card{
+                width: 40vw;
+                .cardHeading{
+                    display: flex;
+                    align-items: center;
+                    gap: 1vw;
+                    margin-bottom: 1vw;
+                    .cardNumber{
+                        font-size: 1.2em;
+                        font-family: 'Source Serif Pro', serif;
+                        font-weight: 600;
+                        color: white;
+                        width: 3.75vw;
+                        aspect-ratio: 1 / 1;
+                        border-radius: 50%;
+                        text-align: center;
+                        vertical-align: middle;
+                        line-height: 3.75vw;
+                    }
+                    .cardHeadingText{
+                        font-size: 1.2em;
+                        font-family: 'Source Serif Pro', serif;
+                        font-weight: 600;
+                    }
+                }
+                p{
+                    font-size: 0.8em;
+                    font-family: 'Kurale', serif;
+                }
+            }
+            #card1 .cardNumber{
+                background-color: var(--blue2);
+            }
+            #card2 .cardNumber{
+                background-color: var(--red1);
+            }
+            #card3 .cardNumber{
+                background-color: var(--red3);
+            }
+            #card4 .cardNumber{
+                background-color: var(--blue1);
+            }
+            #card5 .cardNumber{
+                background-color: var(--blue3);
+            }
+            #card6 .cardNumber{
+                background-color: var(--red2);
+            }
+        }
+        .button{
+            margin-bottom: 3vw;
+        }
+    }
+    .blockHeading{
+        width: 90%;
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Source Serif Pro', serif;
+        font-weight: 600;
+        margin-top: 1vw;
+    }
+    .button{
+        text-decoration: none;
+        background-color: var(--red2);
+        border-radius: 1.25vw;
+        border: max(1px, 0.15vw) solid black;
+        padding: 0.5vw 1vw;
+        color: white;
+        font-family: 'Kurale', serif;
+        font-weight: lighter;
+        font-size: 1em;
+        text-align: center;
+        transition: transform 0.2s ease;
+    }
+}
+
+@media (max-aspect-ratio: 7/5){
+    main{
+        #pricesBlock{
+            height: auto;
+            #pbMain{
+                flex-grow: 0;
+                .right{
+                    img{
+                        height: 40vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    main{
+        #pricesBlock{
+            height: auto;
+            #pbMain{
+                flex-grow: 0;
+                margin-top: 6vw;
+                .left{
+                    font-size: 2em;
+                    gap: 6vw;
+                    width: 90vw;
+                    table{
+                        tr{
+                            th, td{
+                                padding: 1.6vw;
+                                font-size: 0.7em;
+                            }
+                        }
+                    }
+                    .tip{
+                        font-size: 0.975em;
+                        .subheading{
+                            margin-bottom: 1vw;
+                        }
+                    }
+                }
+                .right{
+                    display: none;
+                }
+            }
+        }
+        #cardBlock{
+            #cardWrapper{
+                row-gap: 6vw;
+                margin: 6vw 0;
+                font-size: 2em;
+                .card{
+                    width: 80vw;
+                    .cardHeading{
+                        gap: 2vw;
+                        margin-bottom: 2vw;
+                        .cardNumber{
+                            width: 7.5vw;
+                            line-height: 7.5vw;
+                        }
+                    }
+                }
+            }
+            .button{
+                font-size: 2em;
+                margin-bottom: 6vw;
+            }
+        }
+        .blockHeading{
+            font-size: 3.5em;
+            margin-top: 4vw;
+        }
+        .button{
+            border-radius: 2.5vw;
+            border: max(1px, 0.3vw) solid black;
+            padding: 1vw 2vw;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button:hover{
+        transform: scale(1.025);
+    }
+}
