@@ -13,7 +13,7 @@
 <body>
     <div id="burgerMenu">
         <div class="burgerRow firstBurgerRow">
-            <a href="/" style="text-decoration: none;">
+            <a href="/">
                 <div id="leftBurger">
                     <img src="{{ url_for('static', filename='img/symbols/logo.png') }}" alt="Логотип TopEnglish">
                     <h1>TopEnglish</h1>
@@ -21,10 +21,10 @@
             </a>
             <svg id="burgerButtonBurger" onclick="hideBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
         </div>
-        <div class="burgerRow"><a href="/services#pricesBlock">Ціни</a></div>
-        <div class="burgerRow"><a href="/services#cardBlock">Програми</a></div>
-        <div class="burgerRow"><a href="/teachers">Учителі</a></div>
-        <div class="burgerRow"><a href="/location">Локація</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/services#prices">Ціни</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/services#programs">Програми</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/teachers">Учителі</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/location">Локація</a></div>
     </div>
     <div id="overlay" onclick="hideBurger()"></div>
     <header>
@@ -35,8 +35,8 @@
             </div>
         </a>
         <div id="middleHeader">
-            <a href="/services#pricesBlock">Ціни</a>
-            <a href="/services#cardBlock">Програми</a>
+            <a href="/services#prices">Ціни</a>
+            <a href="/services#programs">Програми</a>
             <a href="/teachers">Учителі</a>
             <a href="/location">Локація</a>
         </div>
@@ -48,7 +48,7 @@
                 <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.0499 20.4333L22.8166 19.95C22.3188 19.8915 21.8143 19.9466 21.3409 20.1112C20.8675 20.2757 20.4375 20.5454 20.0833 20.9L17.0166 23.9667C12.2856 21.5599 8.44005 17.7143 6.03328 12.9833L9.11661 9.9C9.83328 9.18333 10.1833 8.18333 10.0666 7.16667L9.58328 2.96667C9.48914 2.15348 9.09906 1.40337 8.48738 0.859322C7.87571 0.315272 7.08523 0.0153291 6.26661 0.0166671H3.38328C1.49995 0.0166671 -0.066721 1.58333 0.0499457 3.46667C0.933279 17.7 12.3166 29.0667 26.5333 29.95C28.4166 30.0667 29.9833 28.5 29.9833 26.6167V23.7333C29.9999 22.05 28.7333 20.6333 27.0499 20.4333Z" fill="#555555"/></svg>
             </a>
         </div>
-        <div id="pricesBlock">
+        <div id="prices">
             <h1 class="blockHeading">Ціни на наші заняття</h1>
             <div id="pbMain">
                 <div class="left">
@@ -89,8 +89,8 @@
                 </div>
             </div>
         </div>
-        <div id="cardBlock">
-            <h1 class="blockHeading">Наші програми навчання</h1>
+        <div id="programs">
+            <h1 class="blockHeading">Програми навчання</h1>
             <div id="cardWrapper">
                 <div class="card" id="card1">
                     <div class="cardHeading">
@@ -135,13 +135,13 @@
                     <p class="cardDescription">Курс для повних початківців. Повільний темп, прості матеріали, базова лексика та фрази, багато повторень і підтримка викладача. Ідеально, якщо студент ніколи не вчив англійську.</p>
                 </div>
             </div>
-            <a href="/prices" class="button">Переглянути ціни</a>
+            <a href="/location" class="button">Подивитися локацію</a>
         </div>
     </main>
     <footer>
         <div id="footerButtons">
-            <a href="/services#pricesBlock">Ціни</a>
-            <a href="/services#cardBlock">Програми</a>
+            <a href="/services#prices">Ціни</a>
+            <a href="/services#programs">Програми</a>
             <a href="/teachers">Контакти</a>
             <a href="/location">Адреса</a>
         </div>

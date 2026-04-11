@@ -246,7 +246,7 @@ body{
 }
 
 @media (hover: hover) and (pointer: fine){
-    .burgerRow a:hover{
+    .notFirstBurgerRow a:hover{
         transform: translateY(-10%);
     }
     header div a:hover{

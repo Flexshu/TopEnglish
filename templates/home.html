@@ -15,7 +15,7 @@
 <body>
     <div id="burgerMenu">
         <div class="burgerRow firstBurgerRow">
-            <a href="/" style="text-decoration: none;">
+            <a href="/">
                 <div id="leftBurger">
                     <img src="{{ url_for('static', filename='img/symbols/logo.png') }}" alt="Логотип TopEnglish">
                     <h1>TopEnglish</h1>
@@ -23,10 +23,10 @@
             </a>
             <svg id="burgerButtonBurger" onclick="hideBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
         </div>
-        <div class="burgerRow"><a href="/services#pricesBlock">Ціни</a></div>
-        <div class="burgerRow"><a href="/services#cardBlock">Програми</a></div>
-        <div class="burgerRow"><a href="/teachers">Учителі</a></div>
-        <div class="burgerRow"><a href="/location">Локація</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/services#prices">Ціни</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/services#programs">Програми</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/teachers">Учителі</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/location">Локація</a></div>
     </div>
     <div id="overlay" onclick="hideBurger()"></div>
     <header>
@@ -37,8 +37,8 @@
             </div>
         </a>
         <div id="middleHeader">
-            <a href="/services#pricesBlock">Ціни</a>
-            <a href="/services#cardBlock">Програми</a>
+            <a href="/services#prices">Ціни</a>
+            <a href="/services#programs">Програми</a>
             <a href="/teachers">Учителі</a>
             <a href="/location">Локація</a>
         </div>
@@ -60,8 +60,8 @@
                 </div>
                 <p>Персональні, парні та групові заняття для будь-якого рівня в Харкові</p>
                 <div id="b1Buttons">
-                    <a href="/programs">Програми</a>
-                    <a href="/prices">Ціни</a>
+                    <a href="/services#programs">Програми</a>
+                    <a href="/services#prices">Ціни</a>
                 </div>
             </div>
             <div id="b1Right">
@@ -96,13 +96,13 @@
                     <svg viewBox="0 0 248 248" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="124" cy="124" r="122.5" fill="#FFEB8F" stroke="black" stroke-width="3"/><circle cx="124" cy="124" r="105" fill="#FFE15B"/><circle cx="123.5" cy="123.5" r="83.5" fill="#FFD000"/><path d="M93.45 131.816V124.904H108.17L120.714 115.56H93.45V108.776H129.674C131.466 106.813 132.831 104.979 133.77 103.272C134.709 101.48 135.178 99.5173 135.178 97.384C135.178 92.8613 134.069 89.5333 131.85 87.4C129.631 85.1813 126.687 84.072 123.018 84.072C121.909 84.072 120.799 84.1147 119.69 84.2C118.666 84.2853 117.557 84.456 116.362 84.712L115.21 91.24C114.613 94.7387 113.546 97.1707 112.01 98.536C110.474 99.9013 108.725 100.584 106.762 100.584C103.263 100.584 101.002 98.92 99.978 95.592C100.149 92.264 101.301 89.2347 103.434 86.504C105.653 83.7733 108.639 81.5973 112.394 79.976C116.234 78.2693 120.671 77.416 125.706 77.416C133.215 77.416 139.061 79.208 143.242 82.792C147.423 86.376 149.514 90.984 149.514 96.616C149.514 101.053 148.063 105.107 145.162 108.776H153.738V115.56H139.274L126.986 124.904H153.738V131.816H117.642C116.191 133.267 115.039 134.888 114.186 136.68C113.418 138.472 113.034 140.605 113.034 143.08C113.034 147.347 114.314 150.632 116.874 152.936C119.434 155.24 122.677 156.392 126.602 156.392C127.711 156.392 128.778 156.349 129.802 156.264C130.826 156.093 131.893 155.923 133.002 155.752L134.666 147.816C135.349 144.573 136.373 142.355 137.738 141.16C139.189 139.88 140.853 139.24 142.73 139.24C144.181 139.24 145.461 139.667 146.57 140.52C147.765 141.373 148.575 142.611 149.002 144.232C148.49 150.12 146.058 154.685 141.706 157.928C137.354 161.171 131.381 162.792 123.786 162.792C115.679 162.792 109.365 161.043 104.842 157.544C100.319 153.96 98.058 149.181 98.058 143.208C98.058 140.989 98.3993 138.941 99.082 137.064C99.85 135.101 100.789 133.352 101.898 131.816H93.45Z" fill="white"/></svg>
                     <h1>Вигідні ціни</h1>
                     <p>Доступна вартість занять без втрати якості навчання та гнучкий розклад викладачів</p>
-                    <a href="/prices">Переглянути ціни</a>
+                    <a href="/services#prices">Переглянути ціни</a>
                 </div>
                 <div class="b2Card">
                     <svg viewBox="0 0 248 248" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="124" cy="124" r="122.5" fill="#D1FAE4" stroke="black" stroke-width="3"/><rect x="43" y="64" width="161" height="120" rx="14" fill="#0BB980"/><rect x="56" y="74" width="136" height="85" rx="10" fill="#D1FAE4"/><rect x="69" y="93" width="110" height="4" fill="#0BB980"/><rect x="69" y="113" width="110" height="4" fill="#0BB980"/><rect x="69" y="133" width="79" height="4" fill="#0BB980"/><circle cx="123.5" cy="199.5" r="27.5" fill="#FBBF24"/><path d="M134.941 189.04C135.416 188.465 136.097 188.097 136.839 188.017C137.581 187.936 138.325 188.148 138.913 188.608C139.201 188.831 139.442 189.111 139.621 189.429C139.8 189.747 139.914 190.098 139.955 190.461C139.996 190.824 139.964 191.191 139.86 191.541C139.757 191.892 139.584 192.217 139.353 192.5L124.313 210.98C124.061 211.285 123.749 211.535 123.396 211.713C123.042 211.892 122.656 211.995 122.261 212.016C121.866 212.038 121.47 211.977 121.1 211.838C120.73 211.699 120.392 211.484 120.109 211.208L108.829 200.128L108.633 199.92C107.729 198.832 107.793 197.228 108.829 196.212C109.865 195.196 111.501 195.132 112.609 196.02L112.821 196.212L121.901 205.092L134.981 189.052L134.941 189.04Z" fill="white"/><path d="M204 44L222 65.9655H212.308V93H195.692V65.9655H186L204 44Z" fill="#EF4345"/></svg>
                     <h1>Готуємо до будь-чого</h1>
                     <p>IELTS, TOEFL, PET, FCE, НМТ — ми підготуємо вас до досягнення будь-якої мети</p>
-                    <a href="/programs">Обрати програму</a>
+                    <a href="/services#programs">Обрати програму</a>
                 </div>
             </div>
         </div>
@@ -237,8 +237,8 @@
     </main>
     <footer>
         <div id="footerButtons">
-            <a href="/services#pricesBlock">Ціни</a>
-            <a href="/services#cardBlock">Програми</a>
+            <a href="/services#prices">Ціни</a>
+            <a href="/services#programs">Програми</a>
             <a href="/teachers">Контакти</a>
             <a href="/location">Адреса</a>
         </div>

@@ -6,7 +6,7 @@ html{
 
 main{
     font-size: min(2.25vw, 50px);
-    #pricesBlock{
+    #prices{
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -84,7 +84,7 @@ main{
             }
         }
     }
-    #cardBlock{
+    #programs{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -174,7 +174,7 @@ main{
 
 @media (max-aspect-ratio: 7/5){
     main{
-        #pricesBlock{
+        #prices{
             height: auto;
             #pbMain{
                 flex-grow: 0;
@@ -190,8 +190,9 @@ main{
 
 @media (max-width: 900px){
     main{
-        #pricesBlock{
+        #prices{
             height: auto;
+            scroll-margin-top: var(--headerMobileHeight);
             #pbMain{
                 flex-grow: 0;
                 margin-top: 6vw;
@@ -219,7 +220,8 @@ main{
                 }
             }
         }
-        #cardBlock{
+        #programs{
+            scroll-margin-top: var(--headerMobileHeight);
             #cardWrapper{
                 row-gap: 6vw;
                 margin: 6vw 0;
