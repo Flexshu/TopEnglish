@@ -1,0 +1,256 @@
+@import url("general.css");
+
+main{
+    font-size: min(2.25vw, 50px);
+    .block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: var(--blockHeight);
+        width: 100vw;
+        .blockHeading{
+            width: 90%;
+            text-align: center;
+            font-size: 2em;
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 600;
+            margin-top: 1vw;
+        }
+        .blockMain{
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            .left{
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                .marginedLeft{
+                    width: calc(100% - 8vw);
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    p{
+                        svg{
+                            height: 3vw;
+                            margin-right: 0.65vw;
+                            transform: translateY(15%);
+                            path{
+                                fill: black;
+                            }
+                        }
+                    }
+                    .adress{
+                        font-family: 'Kurale', serif;
+                        font-size: 1.25em;
+                    }
+                    .parking{
+                        font-family: 'Source Serif Pro', serif;
+                        font-size: 1.25em;
+                        font-weight: 600;
+                    }
+                    .metro{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 0.5vw;
+                        .metroFirst{
+                            font-family: 'Source Serif Pro', serif;
+                            font-size: 1.25em;
+                            font-weight: 600;
+                        }
+                        .metroSecond{
+                            font-family: 'Kurale', serif;
+                            font-size: 1em;
+                            svg{
+                                height: 2.75vw;
+                            }
+                        }
+                    }
+                    .button{
+                        text-decoration: none;
+                        background-color: var(--red2);
+                        border-radius: 1.25vw;
+                        border: max(1px, 0.15vw) solid black;
+                        padding: 0.5vw 1vw;
+                        color: white;
+                        font-family: 'Kurale', serif;
+                        font-weight: lighter;
+                        font-size: 1em;
+                        text-align: center;
+                        cursor: pointer;
+                        transition: transform 0.2s ease;
+                    }
+                }
+            }
+            .right{
+                margin-right: 4vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: max(65vh, 500px);
+                    border-radius: 2.5vw;
+                    border: solid 0.3vw black;
+                }
+            }
+        }
+    }
+}
+
+#windowContainer{
+    position: fixed;
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    overflow-y: auto;
+    transition: opacity 0.25s ease;
+    #popUpWindow{
+        position: relative;
+        z-index: 31;
+        background-color: white;
+        border: solid min(0.5vmin, 5px) black;
+        padding: 4vmin;
+        padding-top: 2vmin;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vmin;
+        border-radius: 3vmin;
+        .windowName{
+            color: black;
+            font-family: "Kurale", serif;
+            font-size: 5vmin;
+            text-align: center;
+            svg{
+                vertical-align: middle;
+                height: 1em;
+                width: auto;
+                transform: translateY(-10%);
+                path{
+                    fill: black;
+                }
+            }
+        }
+        iframe{
+            border: solid min(0.3vmin, 3px) black;
+            border-radius: 2vmin;
+            width: 70vmin;
+            aspect-ratio: 1 / 1;
+        }
+        .crossIcon{
+            position: absolute;
+            display: block;
+            top: 2.5vmin;
+            right: 2.5vmin;
+            width: 4vmin;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+            transition: transform 0.25s ease;
+            path{
+                fill: black;
+            }
+        }
+    }
+    #windowOverlay{
+        position: fixed;
+        top: 0;
+        z-index: 30;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        cursor: pointer;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+}
+
+@media (max-aspect-ratio: 7 / 5){
+    main{
+        .block{
+            height: auto;
+            .blockMain{
+                flex-grow: 0;
+                .right{
+                    padding: 4vw 0;
+                    img{
+                        height: 40vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    main{
+        .block{
+            height: auto;
+            .blockHeading{
+                font-size: 3.5em;
+                margin-top: 4vw;
+            }
+            .blockMain{
+                flex-direction: column-reverse;
+                .left{
+                    width: 100vw;
+                    margin-bottom: 8vw;
+                    .marginedLeft{
+                        gap: 8vw;
+                        font-size: 2em;
+                        p{
+                            svg{
+                                height: 6vw;
+                            }
+                        }
+                        .metro{
+                            .metroSecond{
+                                svg{
+                                    height: 5vw;
+                                }
+                            }
+                        }
+                        .button{
+                            padding: 1vw 2vw;
+                            border-radius: 2.5vw;
+                        }
+                    }
+                }
+                .right{
+                    width: 100vw;
+                    padding-right: 0;
+                    padding: 4vw 0 8vw 0;
+                    img{
+                        height: 75vw;
+                        border-width: 0.5vw;
+                        border-radius: 5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 452px){
+    #windowContainer{
+        align-items: flex-start;
+    }
+}
+
+@media (hover: hover) and (pointer: fine){
+    .button:hover{
+        transform: scale(1.025);
+    }
+    .crossIcon:hover{
+        transform: scale(1.1);
+    }
+}

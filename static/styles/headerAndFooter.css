@@ -13,7 +13,7 @@ body{
     #burgerMenu{
         position: fixed;
         transform: translateY(-100%);
-        z-index: 15;
+        z-index: 17;
         transition: transform 0.2s ease;
         .burgerRow{
             height: var(--headerMobileHeight);
@@ -65,7 +65,7 @@ body{
         width: 100vw;
         height: 100dvh;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 14;
+        z-index: 16;
         cursor: pointer;
         pointer-events: none;
         opacity: 0;
@@ -130,7 +130,7 @@ body{
         background-color: white;
         #floatButtonWrapper{
             position: fixed;
-            z-index: 18;
+            z-index: 14;
             right: 35px;
             bottom: 35px;
             transition: transform 0.25s ease;
