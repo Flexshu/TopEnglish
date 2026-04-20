@@ -34,9 +34,10 @@ main{
                     align-items: center;
                     p{
                         svg{
-                            height: 3vw;
+                            height: 1em;
                             margin-right: 0.65vw;
-                            transform: translateY(15%);
+                            vertical-align: middle;
+                            transform: translateY(-10%);
                             path{
                                 fill: black;
                             }
