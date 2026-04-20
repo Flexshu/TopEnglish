@@ -241,12 +241,6 @@ main{
     }
 }
 
-@media (max-height: 452px){
-    #windowContainer{
-        align-items: flex-start;
-    }
-}
-
 @media (hover: hover) and (pointer: fine){
     .button:hover{
         transform: scale(1.025);
