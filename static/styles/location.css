@@ -118,8 +118,8 @@ main{
         z-index: 31;
         background-color: white;
         border: solid min(0.5vmin, 5px) black;
-        padding: 4vmin;
-        padding-top: 2vmin;
+        padding: 3.75vmin;
+        padding-top: 1.5vmin;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
