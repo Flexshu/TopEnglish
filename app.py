@@ -11,10 +11,6 @@ def home():
 def programs():
     return f.render_template("services.html")
 
-@app.route("/teachers")
-def teachers():
-    return f.render_template("teachers.html")
-
 @app.route("/location")
 def location():
     return f.render_template("location.html")
