@@ -117,7 +117,7 @@ main{
         position: relative;
         z-index: 31;
         background-color: white;
-        border: solid min(0.5vmin, 5px) black;
+        border: solid min(0.45vmin, 4.5px) black;
         padding: 3.75vmin;
         padding-top: 1.5vmin;
         overflow-y: auto;
@@ -125,7 +125,7 @@ main{
         flex-direction: column;
         align-items: center;
         gap: 2vmin;
-        border-radius: 3vmin;
+        border-radius: 4vmin;
         .windowName{
             color: black;
             font-family: "Kurale", serif;
