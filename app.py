@@ -15,5 +15,13 @@ def programs():
 def location():
     return f.render_template("location.html")
 
+@app.route("/admin")
+def admin():
+    return f.render_template("admin.html")
+
+@app.route("/login")
+def login():
+    return f.render_template("login.html")
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=os.environ.get("PORT", 5001), debug=True)

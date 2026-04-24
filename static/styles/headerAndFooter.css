@@ -1,4 +1,4 @@
-@import url("general.css");
+@import "general.css";
 
 *{
     margin: 0;
@@ -17,8 +17,8 @@ body{
         transition: transform 0.2s ease;
         .burgerRow{
             height: var(--headerMobileHeight);
-            width: calc(100vw - 40px);
-            padding: 0 20px;
+            width: calc(100vw - 20px);
+            padding: 0 10px;
             background-color: var(--gray1);
             display: flex;
             align-items: center;
@@ -81,7 +81,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: max(2.75dvh, 22px);
+        font-size: 25px;
         border-bottom: 2px solid black;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         div{
@@ -108,7 +108,7 @@ body{
         #leftHeader{
             gap: 10px;
             position: absolute;
-            left: 20px;
+            left: 15px;
             top: 0;
         }
         #middleHeader{
@@ -118,7 +118,7 @@ body{
             height: 50%;
             display: none;
             position: absolute;
-            right: 20px;
+            right: 10px;
             cursor: pointer;
             rect{
                 fill: var(--gray3);
@@ -168,7 +168,7 @@ body{
         width: 100%;
         height: var(--headerHeight);
         background-color: var(--gray1);
-        font-size: max(2.75dvh, 22px);
+        font-size: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -208,6 +208,9 @@ body{
         header{
             height: var(--headerMobileHeight);
             font-size: 20px;
+            #leftHeader{
+                left: 10px;
+            }
             #middleHeader{
                 display: none;
             }

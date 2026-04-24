@@ -1,0 +1,124 @@
+@import "general.css";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--gray1);
+}
+
+main{
+    width: 100vw;
+    height: 100dvh;
+    background-color: var(--gray1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .homeButton{
+        text-decoration: none;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 25px;
+        img{
+            height: 60px;
+        }
+        h1{
+            font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+            font-size: 0.95em;
+            color: var(--blue3);
+        }
+    }
+    .loginBlock{
+        background-color: white;
+        width: min(70vw, 500px);
+        padding: min(6vw, 40px);
+        border-radius: min(4vw, 28px);
+        box-shadow: 0 0 min(2.5vw, 18px) min(1vw, 7px) rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: min(6vw, 40px);
+        font-size: min(3vw, 20px);
+        svg{
+            width: 20%;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 2.3em;
+            font-weight: 400;
+        }
+        .inputBlock{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: min(1.5vw, 11px);
+            label{
+                font-family: 'Source Serif Pro', serif;
+                font-size: 1.75em;
+            }
+            input{
+                border-radius: min(1.5vw, 11px);
+                border: solid min(0.3vw, 2px) black;
+                padding: min(1.5vw, 11px) min(2vw, 14px);
+                font-family: 'Source Serif Pro', serif;
+                font-weight: lighter;
+                font-size: 1.25em;
+                &::placeholder{
+                    color: var(--gray2);
+                }
+                &:focus{
+                    border-color: var(--blue2);
+                    outline: none;
+                }
+            }
+            p{
+                align-self: center;
+                font-family: 'Kurale', serif;
+                font-size: 1em;
+                color: var(--red2);
+                display: none;
+            }
+        }
+        .button{
+            background-color: var(--red2);
+            border-radius: min(2.5vw, 18px);
+            border: min(0.4vw, 2.8px) solid black;
+            padding: min(0.25vw, 2px) 0;
+            width: 50%;
+            color: white;
+            font-family: 'Kurale', serif;
+            font-weight: lighter;
+            font-size: 2em;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+    }
+}
+
+@media (max-width: 1100px){
+    main{
+        .homeButton{
+            font-size: 20px;
+            top: 10px;
+            left: 10px;
+            img{
+                height: 50px;
+            }
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine){
+    .button:hover{
+        transform: scale(1.025);
+    }
+}

@@ -1,4 +1,4 @@
-@import url("general.css");
+@import "general.css";
 
 main{
     font-size: min(2.25vw, 50px);

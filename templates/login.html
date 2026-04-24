@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top English — школа англійської в Харкові. Досвідчені викладачі допоможуть покращити вашу англійську ефективно та за розумною ціною.">
+    <title>TopEnglish — панель адміністратора — ухід</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/symbols/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+    <script src="{{ url_for('static', filename='scripts/burger.js') }}" defer></script>
+</head>
+<body>
+    <main>
+        <a href="/" class="homeButton">
+            <img src="{{ url_for('static', filename='img/symbols/logo.png') }}" alt="Логотип TopEnglish">
+            <h1>TopEnglish</h1>
+        </a>
+        <div class="loginBlock">
+            <svg viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M55 99C53.4417 99 52.1363 98.472 51.084 97.416C50.0317 96.36 49.5037 95.0547 49.5 93.5C49.4963 91.9453 50.0243 90.64 51.084 89.584C52.1437 88.528 53.449 88 55 88H88V11H55C53.4417 11 52.1363 10.472 51.084 9.416C50.0317 8.36 49.5037 7.05467 49.5 5.5C49.4963 3.94533 50.0243 2.64 51.084 1.584C52.1437 0.528001 53.449 0 55 0H88C91.025 0 93.6155 1.078 95.7715 3.234C97.9275 5.39 99.0037 7.97867 99 11V88C99 91.025 97.9238 93.6155 95.7715 95.7715C93.6192 97.9275 91.0287 99.0037 88 99H55ZM44.9625 55H5.50002C3.94168 55 2.63635 54.472 1.58402 53.416C0.531686 52.36 0.00368563 51.0547 1.89655e-05 49.5C-0.0036477 47.9453 0.524353 46.64 1.58402 45.584C2.64369 44.528 3.94902 44 5.50002 44H44.9625L34.65 33.6875C33.6417 32.6792 33.1375 31.4417 33.1375 29.975C33.1375 28.5083 33.6417 27.225 34.65 26.125C35.6583 25.025 36.9417 24.4512 38.5 24.4035C40.0583 24.3558 41.3875 24.8838 42.4875 25.9875L62.15 45.65C63.25 46.75 63.8 48.0333 63.8 49.5C63.8 50.9667 63.25 52.25 62.15 53.35L42.4875 73.0125C41.3875 74.1125 40.0822 74.6405 38.5715 74.5965C37.0608 74.5525 35.7537 73.9787 34.65 72.875C33.6417 71.775 33.1613 70.4697 33.209 68.959C33.2567 67.4483 33.7828 66.187 34.7875 65.175L44.9625 55Z" fill="black"/></svg>
+            <h1>Панель адміністратора</h1>
+            <div class="inputBlock">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" placeholder="Уведіть пароль" autocomplete="off">
+                <p id="errorMessage"></p>
+            </div>
+            <div class="button">Увійти</div>
+        </div>
+    </main>
+</body>
+</html>
