@@ -1,6 +1,6 @@
 const transitionDuration = 750;
 let current = 0;
-let clickicgEnabled = true;
+let clickingEnabled = true;
 
 const reviews = [...document.getElementsByClassName("b4ReviewCard")];
 const dots = [...document.getElementsByClassName("b4Dot")];
@@ -42,11 +42,11 @@ function disableButtons(){
     buttons.forEach((button) => {
         button.disabled = true;
     });
-    clickicgEnabled = false;
+    clickingEnabled = false;
     setTimeout(() => {
         buttons.forEach((button) => {
             button.disabled = false;
-            clickicgEnabled = true;
+            clickingEnabled = true;
         });
     }, transitionDuration);
 }
@@ -92,7 +92,7 @@ function scrollToCard(id){
 
 for (let i = 0; i < dots.length; i++){
     dots[i].addEventListener('click', () => {
-        if (!clickicgEnabled) return;
+        if (!clickingEnabled) return;
         scrollToCard(i);
     });
 }
