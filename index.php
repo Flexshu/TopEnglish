@@ -1,11 +1,22 @@
 <?php
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-match($uri) {
-    '/' => require 'templates/home.html',
-    '/services' => require 'templates/services.html',
-    '/location' => require 'templates/location.html',
-    '/admin' => require 'templates/admin.html',
-    '/login' => require 'templates/login.html',
-    default => http_response_code(404)
-};
+switch($url) {
+    case "/":
+        require "templates/home.html";
+        break;
+    case "/services":
+        require "templates/services.html";
+        break;
+    case "/location":
+        require "templates/location.html";
+        break;
+    case "/admin":
+        require "templates/admin.html";
+        break;
+    case "/login":
+        require "templates/login.html";
+        break;
+    default:
+        http_response_code(404);
+}
