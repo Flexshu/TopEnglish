@@ -1,0 +1,168 @@
+@import "general.css";
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(2vw, 20px);
+    padding: min(2vw, 20px) 0;
+    font-size: min(3.75vw, 37.5px);
+    .heading{
+        width: 90%;
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Source Serif Pro', serif;
+        font-weight: 600;
+    }
+    table{
+        border-collapse: collapse;
+            tr{
+                th, td{
+                    padding: min(1.65vw, 16.5px);
+                    text-align: center;
+                    font-family: 'Source Serif Pro', serif;
+                    font-size: 0.85em;
+                    border: solid min(0.2vw, 2px) var(--gray1);
+                }
+                th{
+                    font-weight: 700;
+                }
+                th:first-child, td:first-child{
+                    border-left: none;
+                }
+                th:last-child, td:last-child{
+                    border-right: none;
+                }
+            }
+            tr:first-child th, tr:first-child td{
+                border-top: none;
+            }
+            tr:last-child th, tr:last-child td{
+                border-bottom: none;
+            }
+    }
+    .button{
+        
+        background-color: var(--red2);
+        border-radius: min(1.5vw, 15px);
+        border: min(0.2vw, 2px) solid black;
+        padding: min(0.5vw, 5px) min(1.3vw, 13px);
+        color: white;
+        font-family: 'Kurale', serif;
+        font-weight: lighter;
+        font-size: 1em;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+}
+#popupWrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    #popup{
+        position: relative;
+        z-index: 18;
+        background-color: white;
+        border-radius: min(3.6vw, 22.5px);
+        font-size: min(6vw, 37.5px);
+        padding: min(4.8vw, 30px);
+        display: flex;
+        flex-direction: column;
+        gap: min(4.8vw, 30px);
+        align-items: stretch;
+        .inputRow{
+            display: flex;
+            align-items: center;
+            gap: min(2.4vw, 15px);
+            h2{
+                font-family: 'Source Serif Pro', serif;
+                font-weight: 600;
+                font-size: 1em;
+            }
+            .selectWrapper{
+                position: relative;
+                display: flex;
+                align-items: center;
+                select{
+                    appearance: none;
+                    font-family: 'Source Serif Pro', serif;
+                    font-size: 0.75em;
+                    padding: min(0.8vw, 5px) min(6.4vw, 40px) min(0.8vw, 5px) min(1.6vw, 10px);
+                    border: solid min(0.4vw, 2px) black;
+                    border-radius: min(1.6vw, 10px);
+                    cursor: pointer;
+                    &:focus{
+                        border-color: var(--blue2);
+                    }
+                }
+                svg{
+                    position: absolute;
+                    right: min(1.6vw, 10px);
+                    width: min(2.4vw, 15px);
+                    aspect-ratio: 2 / 1;
+                    display: block;
+                    pointer-events: none;
+                    path{
+                        fill: black;
+                    }
+                }
+            }
+            input{
+                font-family: 'Source Serif Pro', serif;
+                font-size: 0.75em;
+                width: min(30vw, 250px);
+                padding: min(0.8vw, 5px) min(1.6vw, 10px);
+                border: solid min(0.4vw, 2px) black;
+                border-radius: min(1.6vw, 10px);
+                &::placeholder{
+                    color: var(--gray2);
+                }
+                &:focus{
+                    border-color: var(--blue2);
+                }
+            }
+        }
+        .buttonRow{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .button{
+                background-color: var(--red2);
+                border-radius: min(2.4vw, 15px);
+                border: min(0.3vw, 2px) solid black;
+                padding: min(0.8vw, 5px);
+                width: 35%;
+                color: white;
+                font-family: 'Kurale', serif;
+                font-weight: lighter;
+                font-size: 0.9em;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+            }
+        }
+    }
+    #popupOverlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 17;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button:hover{
+        transform: scale(1.025);
+    }
+}

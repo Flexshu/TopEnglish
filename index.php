@@ -14,7 +14,7 @@ switch($url) {
     case "/admin":
         require "templates/admin.html";
         break;
-    case "/login":
+    case "/admin/login":
         require "templates/login.html";
         break;
     case "/favicon.ico":

@@ -6,9 +6,122 @@
     <meta name="description" content="Top English — школа англійської в Харкові. Досвідчені викладачі допоможуть покращити вашу англійську ефективно та за розумною ціною.">
     <title>TopEnglish — панель адміністратора</title>
     <link rel="icon" href="/static/img/symbols/icon.png">
-    <link rel="stylesheet" href="/static/styles/admin.css">
+    <link rel="stylesheet" href="/static/styles/headerAndFooter.css">
+    <link rel="stylesheet" href="/static/styles/panel.css">
+    <script src="static/scripts/burger.js" defer></script>
 </head>
 <body>
-    
+    <div id="burgerMenu">
+        <div class="burgerRow firstBurgerRow">
+            <a href="/">
+                <div id="leftBurger">
+                    <img src="/static/img/symbols/logo.png" alt="Логотип TopEnglish">
+                    <h1>TopEnglish</h1>
+                </div>
+            </a>
+            <svg id="burgerButtonBurger" onclick="hideBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
+        </div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/">Головна</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/services#prices">Ціни</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/services#programs">Програми</a></div>
+        <div class="burgerRow notFirstBurgerRow"><a href="/location">Локація</a></div>
+    </div>
+    <div id="overlay" onclick="hideBurger()"></div>
+    <header>
+        <a href="/" style="text-decoration: none;">
+            <div id="leftHeader">
+                <img src="/static/img/symbols/logo.png" alt="Логотип TopEnglish">
+                <h1>TopEnglish</h1>
+            </div>
+        </a>
+        <div id="middleHeader">
+            <a href="/">Головна</a>
+            <a href="/services#prices">Ціни</a>
+            <a href="/services#programs">Програми</a>
+            <a href="/location">Локація</a>
+        </div>
+        <svg id="burgerButton" onclick="showBurger()" width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="7" rx="3.5" fill="#424242"/><rect y="15" width="44" height="7" rx="3.5" fill="#424242"/><rect y="30" width="44" height="7" rx="3.5" fill="#424242"/></svg>
+    </header>
+    <main>
+        <h1 class="heading">Ціни</h1>
+        <table>
+            <tr>
+                <th>Формат занять</th>
+                <th>Ціна за 1 урок</th>
+                <th>Ціна за 1 місяць</th>
+            </tr>
+            <tr>
+                <td>👤 Особистий</td>
+                <td>600 грн/год</td>
+                <td>2400 грн</td>
+            </tr>
+            <tr>
+                <td>👥 Парний</td>
+                <td>400 грн/год</td>
+                <td>1600 грн</td>
+            </tr>
+            <tr>
+                <td>🫂 Груповий</td>
+                <td>300 грн/год</td>
+                <td>1200 грн</td>
+            </tr>
+        </table>
+        <div class="button">Змінити ціну</div>
+        <h1 class="heading">Контакти</h1>
+        <table>
+            <tr>
+                <th>Спосіб звʼязку</th>
+                <th>Контакт</th>
+            </tr>
+            <tr>
+                <td>Телефон</td>
+                <td>+380 67 937 89 15</td>
+            </tr>
+            <tr>
+                <td>Viber</td>
+                <td>+380 67 937 89 15</td>
+            </tr>
+            <tr>
+                <td>Telegram</td>
+                <td>@topenglish_ml</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>marina.lunina@gmail.com</td>
+            </tr>
+        </table>
+        <div class="button">Змінити контакт</div>
+    </main>
+    <div id="popupWrapper">
+        <div id="popup">
+            <div class="inputRow">
+                <h2 id="popupH2">Формат занять:</h2>
+                <div class="selectWrapper">
+                    <select id="popupSelect">
+                        <option value="solo">Особистий</option>
+                        <option value="duo">Парний</option>
+                        <option value="group">Груповий</option>
+                    </select>
+                    <svg viewBox="0 0 66 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H66L33 33L0 0Z" fill="#333333"/></svg>
+                </div>
+                <input type="text" id="popupInput" placeholder="Нова ціна">
+            </div>
+            <div class="buttonRow">
+                <div class="button">Готово</div>
+                <div class="button">Скасувати</div>
+            </div>
+        </div>
+        <div id="popupOverlay"></div>
+    </div>
+    <footer>
+        <div id="footerButtons">
+            <a href="/">Головна</a>
+            <a href="/services#prices">Ціни</a>
+            <a href="/services#programs">Програми</a>
+            <a href="/location">Локація</a>
+        </div>
+        <h1 id="credits">Developed by Yehor Kovalenko</h1>
+        <h3 id="copyrights">© TopEnglish <span id="year"></span></h3>
+    </footer>
 </body>
 </html>
