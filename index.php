@@ -65,18 +65,19 @@ function parseDotEnv(){
 
 function verifyPassword(){
     $body = file_get_contents("php://input");
-    $data = json_decode($body, true) ?? [];
-    $password = $data["password"] ?? null;
+    $data = json_decode($body, true);
     $response = [
         "success" => true,
         "error" => ""
     ];
 
-    if ($password === null){
+    if (!isset($data["password"])){
         $response["success"] = false;
         $response["error"] = "Помилка сервера: пароль не переданий";
         return $response;
     }
+    $password = $data["password"];
+
     if (!isset($_ENV["PASSWORD"])){
         $response["success"] = false;
         $response["error"] = "Помилка сервера: пароль не встановлено";
