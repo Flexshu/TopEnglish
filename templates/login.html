@@ -7,6 +7,7 @@
     <title>TopEnglish — панель адміністратора — ухід</title>
     <link rel="icon" href="/static/img/symbols/icon.png">
     <link rel="stylesheet" href="/static/styles/login.css">
+    <script src="/static/scripts/login.js" defer></script>
 </head>
 <body>
     <main>
@@ -19,10 +20,10 @@
             <h1>Панель адміністратора</h1>
             <div class="inputBlock">
                 <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" placeholder="Уведіть пароль" autocomplete="off">
-                <p id="errorMessage"></p>
+                <input type="text" id="password" name="password" placeholder="Уведіть пароль" autocomplete="off">
+                <p id="errorText"></p>
             </div>
-            <div class="button">Увійти</div>
+            <div class="button" id="loginButton">Увійти</div>
         </div>
     </main>
 </body>

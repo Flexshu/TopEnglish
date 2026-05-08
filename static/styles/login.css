@@ -78,11 +78,15 @@ main{
                     border-color: var(--blue2);
                     outline: none;
                 }
+                &.error{
+                    border-color: var(--red2);
+                }
             }
             p{
                 align-self: center;
+                text-align: center;
                 font-family: 'Kurale', serif;
-                font-size: 1em;
+                font-size: 1.2em;
                 color: var(--red2);
                 display: none;
             }
