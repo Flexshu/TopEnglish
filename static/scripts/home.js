@@ -105,3 +105,43 @@ window.addEventListener('resize', () => {
         returnTransition();
     }, 10);
 });
+
+const phoneCard = document.getElementById("b5PhoneCard");
+const telegramCard = document.getElementById("b5TelegramCard");
+const viberCard = document.getElementById("b5ViberCard");
+const emailCard = document.getElementById("b5EmailCard");
+const phoneLabel = document.getElementById("b5PhoneLabel");
+const telegramLabel = document.getElementById("b5TelegramLabel");
+const viberLabel = document.getElementById("b5ViberLabel");
+const emailLabel = document.getElementById("b5EmailLabel");
+
+async function getData(){
+    try{
+        const response = await fetch("/data");
+        if (!response.ok){
+            throw new Error("Статус відповіді: " + response.status);
+        }
+        const data = await response.json();
+        return data;
+    }
+    catch(e){
+        console.log("Помилка при завантаженні даних:", e);
+        return { prices: { solo: null, duo: null, squad: null }, contacts: { phone: null, viber: null, telegram: null, email: null } };
+    }
+}
+
+function setData(data){
+    phoneCard.href = "tel:" + data.contacts.phone.replaceAll(" ", "");
+    telegramCard.href = "https://t.me/" + data.contacts.telegram.replaceAll("@", "");
+    viberCard.href = "viber://chat?number=" + data.contacts.viber.replaceAll(" ", "");
+    emailCard.href = "mailto:" + data.contacts.email;
+    phoneLabel.textContent = data.contacts.phone;
+    telegramLabel.textContent = data.contacts.telegram;
+    viberLabel.textContent = data.contacts.viber;
+    emailLabel.textContent = data.contacts.email;
+}
+
+(async () => {
+    const data = await getData();
+    setData(data);
+})();
