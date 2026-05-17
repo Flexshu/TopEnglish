@@ -42,7 +42,6 @@ main{
             }
     }
     .button{
-        
         background-color: var(--red2);
         border-radius: min(1.5vw, 15px);
         border: min(0.2vw, 2px) solid black;
@@ -54,6 +53,7 @@ main{
         text-align: center;
         cursor: pointer;
         transition: transform 0.2s ease;
+        margin-bottom: min(1vw, 10px);
     }
 }
 #popupWrapper{
@@ -76,7 +76,7 @@ main{
         padding: min(4.8vw, 30px);
         display: flex;
         flex-direction: column;
-        gap: min(4.8vw, 30px);
+        gap: min(4vw, 25px);
         align-items: stretch;
         .inputRow{
             display: flex;
@@ -89,12 +89,10 @@ main{
             }
             .selectWrapper{
                 position: relative;
-                display: flex;
-                align-items: center;
                 select{
                     appearance: none;
                     font-family: 'Source Serif Pro', serif;
-                    font-size: 0.75em;
+                    font-size: 0.8em;
                     padding: min(0.8vw, 5px) min(6.4vw, 40px) min(0.8vw, 5px) min(1.6vw, 10px);
                     border: solid min(0.4vw, 2px) black;
                     border-radius: min(1.6vw, 10px);
@@ -106,6 +104,8 @@ main{
                 svg{
                     position: absolute;
                     right: min(1.6vw, 10px);
+                    top: 50%;
+                    transform: translateY(-50%);
                     width: min(2.4vw, 15px);
                     aspect-ratio: 2 / 1;
                     display: block;
@@ -139,11 +139,11 @@ main{
                 border-radius: min(2.4vw, 15px);
                 border: min(0.3vw, 2px) solid black;
                 padding: min(0.8vw, 5px);
-                width: 35%;
+                width: min(27.5vw, 180px);
                 color: white;
                 font-family: 'Kurale', serif;
                 font-weight: lighter;
-                font-size: 0.9em;
+                font-size: 0.8em;
                 text-align: center;
                 cursor: pointer;
                 transition: transform 0.2s ease;

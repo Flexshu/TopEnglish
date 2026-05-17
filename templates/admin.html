@@ -8,7 +8,8 @@
     <link rel="icon" href="/static/img/symbols/icon.png">
     <link rel="stylesheet" href="/static/styles/headerAndFooter.css">
     <link rel="stylesheet" href="/static/styles/panel.css">
-    <script src="static/scripts/burger.js" defer></script>
+    <script src="/static/scripts/burger.js" defer></script>
+    <script src="/static/scripts/panel.js" defer></script>
 </head>
 <body>
     <div id="burgerMenu">
@@ -52,21 +53,21 @@
             </tr>
             <tr>
                 <td>👤 Особистий</td>
-                <td>600 грн/год</td>
-                <td>2400 грн</td>
+                <td><span class="hourPrice"></span> грн/год</td>
+                <td><span class="monthPrice"></span> грн</td>
             </tr>
             <tr>
                 <td>👥 Парний</td>
-                <td>400 грн/год</td>
-                <td>1600 грн</td>
+                <td><span class="hourPrice"></span> грн/год</td>
+                <td><span class="monthPrice"></span> грн</td>
             </tr>
             <tr>
                 <td>🫂 Груповий</td>
-                <td>300 грн/год</td>
-                <td>1200 грн</td>
+                <td><span class="hourPrice"></span> грн/год</td>
+                <td><span class="monthPrice"></span> грн</td>
             </tr>
         </table>
-        <div class="button">Змінити ціну</div>
+        <div class="button" id="pricesButton">Змінити ціну</div>
         <h1 class="heading">Контакти</h1>
         <table>
             <tr>
@@ -75,43 +76,39 @@
             </tr>
             <tr>
                 <td>Телефон</td>
-                <td>+380 67 937 89 15</td>
+                <td class="contact"></td>
             </tr>
             <tr>
                 <td>Viber</td>
-                <td>+380 67 937 89 15</td>
+                <td class="contact"></td>
             </tr>
             <tr>
                 <td>Telegram</td>
-                <td>@topenglish_ml</td>
+                <td class="contact"></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td>marina.lunina@gmail.com</td>
+                <td class="contact"></td>
             </tr>
         </table>
-        <div class="button">Змінити контакт</div>
+        <div class="button" id="contactsButton">Змінити контакт</div>
     </main>
     <div id="popupWrapper">
         <div id="popup">
             <div class="inputRow">
-                <h2 id="popupH2">Формат занять:</h2>
-                <div class="selectWrapper">
-                    <select id="popupSelect">
-                        <option value="solo">Особистий</option>
-                        <option value="duo">Парний</option>
-                        <option value="group">Груповий</option>
-                    </select>
+                <h2 id="popupLabel"></h2>
+                <div class="selectWrapper" id="popupSelectWrapper">
+                    <select id="popupSelect"></select>
                     <svg viewBox="0 0 66 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H66L33 33L0 0Z" fill="#333333"/></svg>
                 </div>
-                <input type="text" id="popupInput" placeholder="Нова ціна">
+                <input type="text" id="popupInput">
             </div>
             <div class="buttonRow">
-                <div class="button">Готово</div>
-                <div class="button">Скасувати</div>
+                <div class="button" id="readyButton">Готово</div>
+                <div class="button" id="cancelButton">Скасувати</div>
             </div>
         </div>
-        <div id="popupOverlay"></div>
+        <div id="popupOverlay" onclick="hidePopup()"></div>
     </div>
     <footer>
         <div id="footerButtons">
