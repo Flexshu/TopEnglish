@@ -32,5 +32,6 @@ async function getPhoneNumber(){
     }
 }
 (async () => {
+    if (floatButton === null) return;
     floatButton.href = "tel:" + await getPhoneNumber();
 })();

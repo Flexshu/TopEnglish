@@ -3,6 +3,7 @@ const label = document.getElementById("popupLabel");
 const selectWrapper = document.getElementById("popupSelectWrapper");
 const select = document.getElementById("popupSelect");
 const input = document.getElementById("popupInput");
+const errorMessage = document.getElementById("popupErrorMessage");
 const pricesButton = document.getElementById("pricesButton");
 const contactsButton = document.getElementById("contactsButton");
 const readyButton = document.getElementById("readyButton");
@@ -70,6 +71,7 @@ let popupParams = {
     selectOptions: [],
     inputDisplay: "",
     inputPlaceholder: "",
+    errorMessageText: "",
     changedItem: "",
     step: 0
 }
@@ -122,6 +124,8 @@ function showPopup(){
     input.style.display = popupParams.inputDisplay;
     input.placeholder = popupParams.inputPlaceholder;
     input.value = "";
+    errorMessage.style.display = "none";
+    errorMessage.textContent = "";
     fillSelect();
     popup.style.opacity = 1;
     popup.style.pointerEvents = "all";
@@ -130,6 +134,55 @@ function showPopup(){
 function hidePopup(){
     popup.style.opacity = 0;
     popup.style.pointerEvents = "none";
+    input.classList.remove("error");
+}
+
+function showError(){
+    errorMessage.style.display = "block";
+    errorMessage.textContent = popupParams.errorMessageText;
+    input.classList.add("error");
+}
+
+function checkInput(){
+    if (inputValue === ""){
+        popupParams.errorMessageText = "Заповніть поле введення";
+        showError();
+        return false;
+    }
+    if (popupParams.changedItem === "prices"){
+        const regex = /^\d+$/;
+        if (!regex.test(inputValue)){
+            popupParams.errorMessageText = "Ціна повинна бути числом";
+            showError();
+            return false;
+        }
+    }
+    else if (popupParams.changedItem === "contacts"){
+        if (selectValue === "phone" || selectValue === "viber"){
+            const regex = /^\+380[\d ]+$/;
+            if (!regex.test(inputValue)){
+                popupParams.errorMessageText = "Неправильний формат.\n Приклад: +380 67 123 45 67";
+                showError();
+                return false;
+            }
+        }
+        else if (selectValue === "telegram"){
+            if (!inputValue.startsWith("@")){
+                popupParams.errorMessageText = "Telegram повинен починатися з @";
+                showError();
+                return false;
+            }
+        }
+        else if (selectValue === "email"){
+            const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!regex.test(inputValue)){
+                popupParams.errorMessageText = "Некоректний формат email";
+                showError();
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 pricesButton.addEventListener("click", () => {
@@ -155,6 +208,7 @@ readyButton.addEventListener("click", () => {
     }
     else if (popupParams.step === 2){
         inputValue = input.value;
+        if (!checkInput()) return;
         hidePopup();
         data[popupParams.changedItem][selectValue] = inputValue;
         fillTables();
@@ -164,4 +218,8 @@ readyButton.addEventListener("click", () => {
 
 cancelButton.addEventListener("click", () => {
     hidePopup();
+});
+
+input.addEventListener("focus", () => {
+    input.classList.remove("error");
 });

@@ -128,7 +128,20 @@ main{
                 &:focus{
                     border-color: var(--blue2);
                 }
+                &.error{
+                    border-color: var(--red2);
+                }
             }
+        }
+        #popupErrorMessage{
+            text-align: center;
+            white-space: pre-line;
+            font-family: "Kurale", serif;
+            font-size: 0.7em;
+            color: var(--red2);
+            align-self: center;
+            max-width: min(70vw, 450px);
+            display: none;
         }
         .buttonRow{
             display: flex;
