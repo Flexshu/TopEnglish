@@ -144,6 +144,8 @@ switch($url) {
             require "data.json";
         }
         else if ($_SERVER["REQUEST_METHOD"] === "POST"){
+            requireLoggingIn();
+            checkSessionTimeout();
             saveData();
         }
         break;
