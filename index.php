@@ -90,7 +90,7 @@ function saveData(){
     file_put_contents("data.json", json_encode($data));
 }
 
-function requireMethod(string ...$methods){
+function requireMethod(...$methods){
     $method = $_SERVER["REQUEST_METHOD"];
     if (!in_array($method, $methods)){
         http_response_code(405);
